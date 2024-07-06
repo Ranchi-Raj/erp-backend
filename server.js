@@ -19,6 +19,9 @@ mongoose.connect(url).then(() => {
 }).catch((err) => {
     console.log(err)
 })
+app.get('/' , (req,res) =>{
+    res.send("Hello JI KAISE ho App !!")
+})
 // ROUTES
 app.use('/api/signup', UserRoute)
 app.use('/api/tasks', TaskRouter)
